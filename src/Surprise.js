@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 
-export default (props) => {
+const Surprise  =  (props) => {
+    useEffect(()=>{
+        import('./hello').then(mod=>mod.default())
+    },[]);
     return(
         <div>Sorpresa</div>
     )
 }
+
+
+export default Surprise;
